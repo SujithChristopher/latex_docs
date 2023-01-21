@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Kinematic calculations for mobile robots}
+\author{Sujith Christopher}
+\date{January 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Three wheel omnidirectional robot}
+
+\begin{equation}
+    h_1(0) V_b = \frac{1}{r_i} \left[\begin{array}{cc}
+            1 & \tan\gamma_i \\
+        \end{array}\right]
+    \left[\begin{array}{cc}
+            \cos \beta_i    & \sin \beta_i \\
+            \- \sin \beta_i & \cos \beta_i \\
+        \end{array}\right] V_b
+\end{equation}
+
+\begin{equation}
+    \gamma_1 = 0, \beta_1 = 0
+\end{equation}
+
+\begin{equation}
+    = \frac{1}{r_i} \left[\begin{array}{cc}
+            1 & 0 \\
+        \end{array}\right]
+    \left[\begin{array}{cc}
+            \cos 0    & \sin 0 \\
+            \- \sin 0 & \cos 0 \\
+        \end{array}\right] V_b
+\end{equation}
+
+\begin{equation}
+    = \frac{1}{r_i} \left[\begin{array}{cc}
+            1 & 0 \\
+        \end{array}\right]
+    \left[
+        \begin{array}{cc}
+            1 & 0 \\
+            0 & 1 \\
+        \end{array}\right]
+    V_b
+\end{equation}
+\end{document}
