@@ -1,15 +1,24 @@
 \documentclass{article}
+\usepackage{layout}
 \usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphics}
 
-\title{Kinematic calculations for mobile robots}
+\graphicspath{ {./src/} }
+
+
+\headheight=0pt
+\title{\textbf{Kinematic calculations for mobile robots using Omni/Meccanum wheels}}
 \author{Sujith Christopher}
 \date{January 2023}
-
 \begin{document}
 
 \maketitle
 
 \section{Three wheel omnidirectional robot}
+
+\includegraphics{robot_3_omniwheel.jpg}
+
 
 \begin{equation}
     h_1(0) V_b = \frac{1}{r_i} \left[\begin{array}{cc}
@@ -46,4 +55,7 @@
         \end{array}\right]
     V_b
 \end{equation}
+
+
+
 \end{document}
