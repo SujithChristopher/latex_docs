@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{graphics}
+\usepackage{amsmath}
+
 
 \graphicspath{ {./src/} }
 
@@ -15,19 +17,42 @@
 
 \maketitle
 
+\section{Generalized expression}
+
+% refer book
+\begin{large}
+    This general expression is taken from the book
+    "Modern robotics mecanics planning and control" by Kevin M Lynch, Frank C Park,
+    page no 512, please refer this section for more details.
+\end{large}
+
+% \vspace{3pt}
+% \includegraphics{omni_wheel_kinematics_2.png}
+% \includegraphics[scale = 0.5]{omni_wheel_kinematics_2.png}
+\includegraphics{omni_wheel_kinematics_2.png}
+% \vspace{12pt}
+
+% \vspace{3pt}
+% \includegraphics{omni_wheel_kinematics.png}
+% \vspace{12pt}
+
 \section{Three wheel omnidirectional robot}
 
 \includegraphics{robot_3_omniwheel.jpg}
 
 
 \begin{equation}
-    h_1(0) V_b = \frac{1}{r_i} \left[\begin{array}{cc}
+    h_1(0) \mathcal{V}_b = \frac{1}{r_i} \left[\begin{array}{cc}
             1 & \tan\gamma_i \\
         \end{array}\right]
     \left[\begin{array}{cc}
-            \cos \beta_i    & \sin \beta_i \\
-            \- \sin \beta_i & \cos \beta_i \\
-        \end{array}\right] V_b
+            \cos \beta_i  & \sin \beta_i \\
+            -\sin \beta_i & \cos \beta_i \\
+        \end{array}\right]
+    \begin{bmatrix}
+        -y_i & 1 & 0 \\
+        x_i  & 0 & 1 \\
+    \end{bmatrix} \mathcal{V}_b
 \end{equation}
 
 \begin{equation}
@@ -39,9 +64,9 @@
             1 & 0 \\
         \end{array}\right]
     \left[\begin{array}{cc}
-            \cos 0    & \sin 0 \\
-            \- \sin 0 & \cos 0 \\
-        \end{array}\right] V_b
+            \cos 0  & \sin 0 \\
+            -\sin 0 & \cos 0 \\
+        \end{array}\right] \mathcal{V}_b
 \end{equation}
 
 \begin{equation}
@@ -53,7 +78,7 @@
             1 & 0 \\
             0 & 1 \\
         \end{array}\right]
-    V_b
+    \mathcal{V}_b
 \end{equation}
 
 
