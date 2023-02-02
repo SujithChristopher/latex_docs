@@ -26,18 +26,11 @@
     page no 512, please refer this section for more details.
 \end{large}
 
-% \vspace{3pt}
-% \includegraphics{omni_wheel_kinematics_2.png}
-% \includegraphics[scale = 0.5]{omni_wheel_kinematics_2.png}
-\includegraphics{omni_wheel_kinematics_2.png}
-% \vspace{12pt}
 
-% \vspace{3pt}
-% \includegraphics{omni_wheel_kinematics.png}
-% \vspace{12pt}
+\includegraphics{omni_wheel_kinematics_2.png}
+
 
 \section{Three wheel omnidirectional robot}
-
 \includegraphics{robot_3_omniwheel.jpg}
 
 
@@ -60,17 +53,22 @@
 \end{equation}
 
 \begin{equation}
-    = \frac{1}{r_i} \left[\begin{array}{cc}
+    = \frac{1}{r_1} \left[\begin{array}{cc}
             1 & 0 \\
         \end{array}\right]
     \left[\begin{array}{cc}
             \cos 0  & \sin 0 \\
             -\sin 0 & \cos 0 \\
-        \end{array}\right] \mathcal{V}_b
+        \end{array}\right]
+    \begin{bmatrix}
+        -y_1 & 1 & 0 \\
+        x_1  & 0 & 1 \\
+    \end{bmatrix}
+    \mathcal{V}_b
 \end{equation}
 
 \begin{equation}
-    = \frac{1}{r_i} \left[\begin{array}{cc}
+    = \frac{1}{r_1} \left[\begin{array}{cc}
             1 & 0 \\
         \end{array}\right]
     \left[
@@ -78,8 +76,38 @@
             1 & 0 \\
             0 & 1 \\
         \end{array}\right]
+    \begin{bmatrix}
+        -y_1 & 1 & 0 \\
+        x_1  & 0 & 1 \\
+    \end{bmatrix}
     \mathcal{V}_b
 \end{equation}
+\begin{equation}
+    = \frac{1}{r_1}
+    \left[
+        \begin{array}{cc}
+            1 & 0 \\
+        \end{array}\right]
+    \mathcal{V}_b
+\end{equation}
+
+\begin{equation}
+    r_i = r_1 = r_2 = r_3 = r
+\end{equation}
+
+\begin{equation}
+    h_1(0) \mathcal{V}_b = \frac{1}{r}
+    \left[
+        \begin{array}{cc}
+            1 & 0 \\
+        \end{array}\right]
+    \mathcal{V}_b
+\end{equation}
+
+% new page
+\newpage
+\section{Four wheel omnidirectional robot}
+
 
 
 
