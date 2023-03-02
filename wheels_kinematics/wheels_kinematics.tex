@@ -21,7 +21,7 @@
 
 % refer book
 \begin{large}
-    This general expression is taken from the book
+    This general expression is taken from the book \\
     "Modern robotics mecanics planning and control" by Kevin M Lynch, Frank C Park,
     page no 512, please refer this section for more details.
 \end{large}
@@ -186,8 +186,7 @@ $
         \upsilon_{bx} \\
         \upsilon_{by} \\
     \end{bmatrix}
-$ = $\mathcal{A}^{-1} \mathcal{V}_b$
-
+$ = $r\mathcal{A}^{-1} u$
 % new page
 \section{Four wheel omnidirectional robot}
 \includegraphics{robot_4_wheel_kinematics.png}\\
@@ -196,6 +195,8 @@ For wheel 1
 \begin{align*}
     \gamma_1 = 0, \beta_1 = 0
 \end{align*}
+
+$y1 = -y3, x2 = -x4$
 
 For wheel 2
 \begin{align*}
@@ -234,6 +235,16 @@ For wheel 4
         -x_2 & 0 & -1 \\
         -y_3 & 1 & 0  \\
         -x_3 & 0 & -1 \\
+    \end{bmatrix}
+\end{align}
+
+\begin{align}
+    \mathcal{A} =
+    \begin{bmatrix}
+        -y & 1 & 0  \\
+        -x & 0 & -1 \\
+        y & 1 & 0  \\
+        x & 0 & -1 \\
     \end{bmatrix}
 \end{align}
 
@@ -283,5 +294,8 @@ In case of $ y_1 = y, x_2 = -x_3$ the resultant matrix will be
     \end{bmatrix}
 \end{equation}
 
+% x hat
+    $\hat{x}_b$
+    
 
 \end{document}
